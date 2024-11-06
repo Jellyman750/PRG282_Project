@@ -36,7 +36,7 @@ namespace PRG282_Project
         {
             sr.TotalNumberStudents = int.Parse(textBox1.Text);
             sr.AvgAge1= int.Parse(textBox1.Text);
-            string filepath = "Delete.txt";
+            string filepath = "Summary.txt";
             handler.SummaryList.Add(new SummaryRepresentation(sr.TotalNumberStudents,sr.AvgAge1));
 
 
@@ -49,7 +49,8 @@ namespace PRG282_Project
 
 
             }
+            MessageBox.Show("Summary Created");
         }
     }
     }
-}
+
