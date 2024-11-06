@@ -26,5 +26,10 @@ namespace PRG282_Project
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
         public string Course { get => course; set => course = value; }
+
+        public override string ToString()
+        {
+            return $"{studentID},{Name},{Age},{course}";
+        }
     }
 }
