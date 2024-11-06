@@ -31,14 +31,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtStudentID = new System.Windows.Forms.TextBox();
-            this.txtStudentSurname = new System.Windows.Forms.TextBox();
-            this.txtStudentName = new System.Windows.Forms.TextBox();
             this.txtCourse = new System.Windows.Forms.TextBox();
+            this.txtStudentName = new System.Windows.Forms.TextBox();
+            this.txtStudentAge = new System.Windows.Forms.TextBox();
+            this.txtStudentID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.BtnAddStudent = new System.Windows.Forms.Button();
             this.btnViewStudents = new System.Windows.Forms.Button();
             this.BtnUpdateStudent = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtCourse);
             this.groupBox1.Controls.Add(this.txtStudentName);
-            this.groupBox1.Controls.Add(this.txtStudentSurname);
+            this.groupBox1.Controls.Add(this.txtStudentAge);
             this.groupBox1.Controls.Add(this.txtStudentID);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -85,33 +85,33 @@
             this.groupBox1.Text = "Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label3
+            // txtCourse
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(73, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Student Name:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.txtCourse.Location = new System.Drawing.Point(200, 155);
+            this.txtCourse.Name = "txtCourse";
+            this.txtCourse.Size = new System.Drawing.Size(100, 22);
+            this.txtCourse.TabIndex = 7;
             // 
-            // label4
+            // txtStudentName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Student Surname";
+            this.txtStudentName.Location = new System.Drawing.Point(200, 109);
+            this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.Size = new System.Drawing.Size(100, 22);
+            this.txtStudentName.TabIndex = 6;
             // 
-            // label5
+            // txtStudentAge
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(73, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Student ID: ";
+            this.txtStudentAge.Location = new System.Drawing.Point(200, 64);
+            this.txtStudentAge.Name = "txtStudentAge";
+            this.txtStudentAge.Size = new System.Drawing.Size(100, 22);
+            this.txtStudentAge.TabIndex = 5;
+            // 
+            // txtStudentID
+            // 
+            this.txtStudentID.Location = new System.Drawing.Point(200, 15);
+            this.txtStudentID.Name = "txtStudentID";
+            this.txtStudentID.Size = new System.Drawing.Size(100, 22);
+            this.txtStudentID.TabIndex = 4;
             // 
             // label6
             // 
@@ -122,33 +122,33 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Course: ";
             // 
-            // txtStudentID
+            // label5
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(200, 15);
-            this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(100, 22);
-            this.txtStudentID.TabIndex = 4;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(73, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Student ID: ";
             // 
-            // txtStudentSurname
+            // label4
             // 
-            this.txtStudentSurname.Location = new System.Drawing.Point(200, 64);
-            this.txtStudentSurname.Name = "txtStudentSurname";
-            this.txtStudentSurname.Size = new System.Drawing.Size(100, 22);
-            this.txtStudentSurname.TabIndex = 5;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(73, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 16);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Student Age:";
             // 
-            // txtStudentName
+            // label3
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(200, 109);
-            this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(100, 22);
-            this.txtStudentName.TabIndex = 6;
-            // 
-            // txtCourse
-            // 
-            this.txtCourse.Location = new System.Drawing.Point(200, 155);
-            this.txtCourse.Name = "txtCourse";
-            this.txtCourse.Size = new System.Drawing.Size(100, 22);
-            this.txtCourse.TabIndex = 7;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(73, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Student Name:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // BtnAddStudent
             // 
@@ -176,6 +176,7 @@
             this.BtnUpdateStudent.TabIndex = 5;
             this.BtnUpdateStudent.Text = "Update Students Information";
             this.BtnUpdateStudent.UseVisualStyleBackColor = true;
+            this.BtnUpdateStudent.Click += new System.EventHandler(this.BtnUpdateStudent_Click);
             // 
             // button4
             // 
@@ -185,6 +186,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Delete a Student";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // BtnSummary
             // 
@@ -194,6 +196,7 @@
             this.BtnSummary.TabIndex = 7;
             this.BtnSummary.Text = "Generate Summary Report";
             this.BtnSummary.UseVisualStyleBackColor = true;
+            this.BtnSummary.Click += new System.EventHandler(this.BtnSummary_Click);
             // 
             // BtnClear
             // 
@@ -203,6 +206,7 @@
             this.BtnClear.TabIndex = 8;
             this.BtnClear.Text = "Clear";
             this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // Form1
             // 
@@ -220,6 +224,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -238,7 +243,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCourse;
         private System.Windows.Forms.TextBox txtStudentName;
-        private System.Windows.Forms.TextBox txtStudentSurname;
+        private System.Windows.Forms.TextBox txtStudentAge;
         private System.Windows.Forms.TextBox txtStudentID;
         private System.Windows.Forms.Button BtnAddStudent;
         private System.Windows.Forms.Button btnViewStudents;
