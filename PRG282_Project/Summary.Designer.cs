@@ -30,10 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnDisplaySummary = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,14 +60,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details:";
             // 
-            // label2
+            // textBox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Total number of students:";
+            this.textBox2.Location = new System.Drawing.Point(217, 136);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(228, 22);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(217, 75);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(228, 22);
+            this.textBox1.TabIndex = 2;
             // 
             // label3
             // 
@@ -77,26 +84,31 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Average overall age:";
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(217, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 22);
-            this.textBox1.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Total number of students:";
             // 
-            // textBox2
+            // btnDisplaySummary
             // 
-            this.textBox2.Location = new System.Drawing.Point(217, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.btnDisplaySummary.Location = new System.Drawing.Point(204, 303);
+            this.btnDisplaySummary.Name = "btnDisplaySummary";
+            this.btnDisplaySummary.Size = new System.Drawing.Size(194, 39);
+            this.btnDisplaySummary.TabIndex = 2;
+            this.btnDisplaySummary.Text = "Write Summary in Text File";
+            this.btnDisplaySummary.UseVisualStyleBackColor = true;
+            this.btnDisplaySummary.Click += new System.EventHandler(this.btnDisplaySummary_Click);
             // 
             // Summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 354);
+            this.Controls.Add(this.btnDisplaySummary);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Summary";
@@ -117,5 +129,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnDisplaySummary;
     }
 }

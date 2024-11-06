@@ -68,6 +68,7 @@
     <Compile Include="Summary.Designer.cs">
       <DependentUpon>Summary.cs</DependentUpon>
     </Compile>
+    <Compile Include="SummaryRepresentation.cs" />
     <Compile Include="Update.cs">
       <SubType>Form</SubType>
     </Compile>
