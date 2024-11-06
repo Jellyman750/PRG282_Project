@@ -6,26 +6,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace PRG282_Project
 {
     internal class DataHandler
     {
-        SqlConnection conn = new SqlConnection(@"Server=JANNIE\SQLEXPRESS; Initial Catalog=PRG282_Project; Integrated Security=true");
+        SqlConnection conn = new SqlConnection("Server=.; Initial Catalog=PRG282_Project; Integrated Security=true");
 
         SqlCommand cmd;
         SqlDataAdapter adapter;
-        
+        public List<Student> UpdateList= new List<Student>();
+        public List<Student>DeleteList= new List<Student>();
+        public List<SummaryRepresentation> SummaryList = new List<SummaryRepresentation>();
+
         public void update(int id, string name, int age, string course)
         {
             try
             {
+              
                 string query = $@"UPDATE Students SET Student_Name = '{name}', Student_Age = '{age}', Course = '{course}' WHERE Student_ID = '{id}'";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 System.Windows.Forms.MessageBox.Show("Records Updated");
                 conn.Close();
+
+                
+                
+                
 
             }
             catch (Exception ex)
