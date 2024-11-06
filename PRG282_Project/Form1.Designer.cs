@@ -161,7 +161,7 @@
             // 
             // btnViewStudents
             // 
-            this.btnViewStudents.Location = new System.Drawing.Point(147, 333);
+            this.btnViewStudents.Location = new System.Drawing.Point(411, 333);
             this.btnViewStudents.Name = "btnViewStudents";
             this.btnViewStudents.Size = new System.Drawing.Size(115, 47);
             this.btnViewStudents.TabIndex = 4;
@@ -170,7 +170,7 @@
             // 
             // BtnUpdateStudent
             // 
-            this.BtnUpdateStudent.Location = new System.Drawing.Point(280, 333);
+            this.BtnUpdateStudent.Location = new System.Drawing.Point(147, 333);
             this.BtnUpdateStudent.Name = "BtnUpdateStudent";
             this.BtnUpdateStudent.Size = new System.Drawing.Size(115, 47);
             this.BtnUpdateStudent.TabIndex = 5;
@@ -180,7 +180,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(411, 333);
+            this.button4.Location = new System.Drawing.Point(281, 333);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 47);
             this.button4.TabIndex = 6;
