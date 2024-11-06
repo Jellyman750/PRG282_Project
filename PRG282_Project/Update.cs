@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 namespace PRG282_Project
 {
@@ -39,6 +40,25 @@ namespace PRG282_Project
             student.Course = textBox4.Text;
 
             dh.update(student.StudentID, student.Name, student.Age, student.Course);
+
+            string filepath = "Update.txt";
+            dh.UpdateList.Add(new Student(student.StudentID, student.Name, student.Age, student.Course));
+
+
+            using (StreamWriter sw = new StreamWriter(filepath, append: true))
+            {
+                    foreach (var item in dh.UpdateList)
+                    {
+                        sw.WriteLine(item);
+                    }
+
+
+             }
+           
+
+
+
+
 
         }
 
