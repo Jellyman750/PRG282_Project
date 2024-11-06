@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PRG282_Project
 {
@@ -28,7 +29,21 @@ namespace PRG282_Project
         private void button1_Click(object sender, EventArgs e)
         {
             student.StudentID = int.Parse(textBox1.Text);
-            handler.delete(student.StudentID);
+           
+            handler.delete(student.StudentID);//We have to delete the row,and not just delete the ID from the Database,Kyk of of datagridviewRow kan gebruiik
+            string filepath = "Delete.txt";
+            handler.DeleteList.Add(new Student(student.StudentID, student.Name, student.Age, student.Course));
+
+
+            using (StreamWriter sw = new StreamWriter(filepath, append: true))
+            {
+                foreach (var item in handler.DeleteList)
+                {
+                    sw.WriteLine(item);
+                }
+
+
+            }
         }
     }
 }
