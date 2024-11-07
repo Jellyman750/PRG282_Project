@@ -14,7 +14,7 @@ namespace PRG282_Project
     {
         Update update = new Update();
         Summary summary = new Summary();
-        DataHandler dataHandler = new DataHandler();
+        
         public Form1()
         {
             InitializeComponent();
@@ -69,6 +69,7 @@ namespace PRG282_Project
         {
             AddStudent addStudentForm = new AddStudent();
             addStudentForm.ShowDialog();
+
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)

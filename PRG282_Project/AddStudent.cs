@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.IO;
 
 namespace PRG282_Project
 {
@@ -19,6 +20,7 @@ namespace PRG282_Project
 
         }
         DataHandler handler = new DataHandler();
+        Student student = new Student();
 
         public AddStudent()
         {
@@ -28,12 +30,12 @@ namespace PRG282_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string studentID = txtStudentID.Text;
-            string name = txtName.Text;        // Name comes first
-            int age = int.Parse(txtAge.Text);  // Surname comes second
-            string course = txtCourse.Text;
+            student.StudentID = int.Parse((txtStudentID.Text));
+            student.Name = (txtName.Text);
+            student.Age = int.Parse((txtAge.Text));
+            student.Course = txtAge.Text;
 
-            if (string.IsNullOrEmpty(studentID) || string.IsNullOrEmpty(name) || string.IsNullOrEmpty(age.ToString()) || string.IsNullOrEmpty(course))
+            if (string.IsNullOrEmpty(student.StudentID.ToString()) || string.IsNullOrEmpty(student.Name) || string.IsNullOrEmpty(student.Age.ToString()) || string.IsNullOrEmpty(student.Course))
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
@@ -41,17 +43,43 @@ namespace PRG282_Project
 
             try
             {
-                handler.AddStudent(studentID, name, age, course);
+                handler.AddStudent(student.StudentID.ToString(), student.Name, student.Age.ToString(), student.Course);
                 MessageBox.Show("Student added successfully.");
                 this.Close(); // Close the form after saving
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
-        }
+
+
+
+            string filepath = "AddedStudents.txt";
+            handler.AddList.Add(new Student(student.StudentID, student.Name, student.Age, student.Course));
+
+
+            using (StreamWriter sw = new StreamWriter(filepath, append: true))
+            {
+                foreach (var item in handler.AddList)
+                {
+                    sw.WriteLine(item);
+                }
+
+
+            }
+
+
+        
+    }
 
         private void AddStudent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStudentID_TextChanged(object sender, EventArgs e)
         {
 
         }

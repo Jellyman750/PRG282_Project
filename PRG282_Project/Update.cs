@@ -15,7 +15,7 @@ namespace PRG282_Project
 {
     public partial class Update : Form
     {
-        SqlConnection conn = new SqlConnection("Server=JANNIE\\SQLEXPRESS; Initial Catalog=PRG282_Project; Integrated Security=true");
+        SqlConnection conn = new SqlConnection("Server=.; Initial Catalog=PRG282_Project; Integrated Security=true");
 
         DataHandler dh = new DataHandler();
         Student student = new Student();

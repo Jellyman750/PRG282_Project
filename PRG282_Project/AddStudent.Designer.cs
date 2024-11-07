@@ -45,6 +45,7 @@
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(210, 22);
             this.txtStudentID.TabIndex = 0;
+            this.txtStudentID.TextChanged += new System.EventHandler(this.txtStudentID_TextChanged);
             // 
             // txtName
             // 
