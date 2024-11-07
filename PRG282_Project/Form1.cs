@@ -63,5 +63,17 @@ namespace PRG282_Project
         {
             summary.Show();
         }
+
+        private void BtnAddStudent_Click(object sender, EventArgs e)
+        {
+            AddStudentForm addStudentForm = new AddStudentForm(dataHandler);
+            addStudentForm.ShowDialog();
+        }
+
+        private void btnViewStudents_Click(object sender, EventArgs e)
+        {
+            ViewStudentsForm viewForm = new ViewStudentsForm(dataHandler);
+            viewForm.ShowDialog();
+        }
     }
 }

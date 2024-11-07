@@ -84,5 +84,34 @@ namespace PRG282_Project
 
             return count;
         }
+        public void AddStudent(string studentID, string surname, string name, string course)
+        {
+            using (SqlConnection conn = new SqlConnection("Server=.; Initial Catalog=PRG282_Project; Integrated Security=true"))
+            {
+                string query = "INSERT INTO Students (StudentID, Name, Surname, Course) VALUES (@StudentID, @Name, @Surname, @Course)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@StudentID", studentID);
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Surname", surname);
+                cmd.Parameters.AddWithValue("@Course", course);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable GetAllStudents()
+        {
+            using (SqlConnection conn = new SqlConnection("Server=.; Initial Catalog=PRG282_Project; Integrated Security=true"))
+            {
+                string query = "SELECT * FROM Students";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+        }
     }
+}
 }
