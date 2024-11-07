@@ -74,8 +74,8 @@ namespace PRG282_Project
 
         private void btnViewStudents_Click(object sender, EventArgs e)
         {
-            ViewAllStudents viewForm = new ViewAllStudents();
-            viewForm.ShowDialog();
+            
+            ViewAllStudents.Show();
         }
     }
 }
