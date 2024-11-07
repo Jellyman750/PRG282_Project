@@ -11,7 +11,7 @@ namespace PRG282_Project
 {
     internal class DataHandler
     {
-        SqlConnection conn = new SqlConnection("Server=.; Initial Catalog=PRG282_Project; Integrated Security=true");
+        SqlConnection conn = new SqlConnection(@"Server=JANNIE\SQLEXPRESS; Initial Catalog=PRG282_Project; Integrated Security=true");
 
         SqlCommand cmd;
         SqlDataAdapter adapter;
@@ -84,16 +84,16 @@ namespace PRG282_Project
 
             return count;
         }
-        public void AddStudent(string studentID, string surname, string name, string course)
+        public void AddStudent(string studentID, string name, int age, string course)
         {
-            using (SqlConnection conn = new SqlConnection("Server=.; Initial Catalog=PRG282_Project; Integrated Security=true"))
+            using (SqlConnection conn = new SqlConnection(@"Server=JANNIE\SQLEXPRESS; Initial Catalog=PRG282_Project; Integrated Security=true"))
             {
-                string query = "INSERT INTO Students (StudentID, Name, Surname, Course) VALUES (@StudentID, @Name, @Surname, @Course)";
+                string query = "INSERT INTO Students (Student_ID, Student_Name, Student_Age, Course) VALUES (@Student_ID, @Student_Name, @Student_Age, @Course)";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@StudentID", studentID);
-                cmd.Parameters.AddWithValue("@Name", name);
-                cmd.Parameters.AddWithValue("@Surname", surname);
+                cmd.Parameters.AddWithValue("@Student_ID", studentID);
+                cmd.Parameters.AddWithValue("@Student_Name", name);
+                cmd.Parameters.AddWithValue("@Student_Age", age);
                 cmd.Parameters.AddWithValue("@Course", course);
 
                 conn.Open();
@@ -103,7 +103,7 @@ namespace PRG282_Project
 
         public DataTable GetAllStudents()
         {
-            using (SqlConnection conn = new SqlConnection("Server=.; Initial Catalog=PRG282_Project; Integrated Security=true"))
+            using (SqlConnection conn = new SqlConnection(@"Server=JANNIE\SQLEXPRESS; Initial Catalog=PRG282_Project; Integrated Security=true"))
             {
                 string query = "SELECT * FROM Students";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
@@ -114,4 +114,4 @@ namespace PRG282_Project
         }
     }
 }
-}
+

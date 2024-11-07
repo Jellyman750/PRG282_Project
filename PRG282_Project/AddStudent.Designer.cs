@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtStudentID = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtCourse = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,33 +39,33 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtStudentID
             // 
-            this.textBox1.Location = new System.Drawing.Point(359, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtStudentID.Location = new System.Drawing.Point(359, 100);
+            this.txtStudentID.Name = "txtStudentID";
+            this.txtStudentID.Size = new System.Drawing.Size(210, 22);
+            this.txtStudentID.TabIndex = 0;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(359, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(359, 129);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(210, 22);
+            this.txtName.TabIndex = 1;
             // 
-            // textBox3
+            // txtAge
             // 
-            this.textBox3.Location = new System.Drawing.Point(359, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtAge.Location = new System.Drawing.Point(359, 158);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(210, 22);
+            this.txtAge.TabIndex = 2;
             // 
-            // textBox4
+            // txtCourse
             // 
-            this.textBox4.Location = new System.Drawing.Point(359, 187);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(210, 22);
-            this.textBox4.TabIndex = 3;
+            this.txtCourse.Location = new System.Drawing.Point(359, 187);
+            this.txtCourse.Name = "txtCourse";
+            this.txtCourse.Size = new System.Drawing.Size(210, 22);
+            this.txtCourse.TabIndex = 3;
             // 
             // label1
             // 
@@ -90,9 +90,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(275, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Surname";
+            this.label3.Text = "Age";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -124,12 +124,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCourse);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtStudentID);
             this.Name = "AddStudent";
             this.Text = "AddStudent";
+            this.Load += new System.EventHandler(this.AddStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,10 +138,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtStudentID;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtCourse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

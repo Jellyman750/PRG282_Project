@@ -18,22 +18,22 @@ namespace PRG282_Project
         {
 
         }
-        private DataHandler dataHandler;
+        DataHandler handler = new DataHandler();
 
-        public AddStudentForm(DataHandler handler)
+        public AddStudent()
         {
             InitializeComponent();
-            dataHandler = handler;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string studentID = txtStudentID.Text;
             string name = txtName.Text;        // Name comes first
-            string surname = txtSurname.Text;  // Surname comes second
+            int age = int.Parse(txtAge.Text);  // Surname comes second
             string course = txtCourse.Text;
 
-            if (string.IsNullOrEmpty(studentID) || string.IsNullOrEmpty(name) || string.IsNullOrEmpty(surname) || string.IsNullOrEmpty(course))
+            if (string.IsNullOrEmpty(studentID) || string.IsNullOrEmpty(name) || string.IsNullOrEmpty(age.ToString()) || string.IsNullOrEmpty(course))
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
@@ -41,7 +41,7 @@ namespace PRG282_Project
 
             try
             {
-                dataHandler.AddStudent(studentID, name, surname, course);
+                handler.AddStudent(studentID, name, age, course);
                 MessageBox.Show("Student added successfully.");
                 this.Close(); // Close the form after saving
             }
@@ -49,6 +49,11 @@ namespace PRG282_Project
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+        }
+
+        private void AddStudent_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

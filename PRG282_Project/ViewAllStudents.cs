@@ -13,19 +13,18 @@ namespace PRG282_Project
 {
     public partial class ViewAllStudents : Form
     {
+        DataHandler handler = new DataHandler();
         private DataHandler dataHandler;
-        public ViewAllStudents(DataHandler dataHandler)
+        public ViewAllStudents()
         {
             InitializeComponent();
-            dataHandler = handler;
-            LoadStudentData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                dataGridView1_CellContentClick.DataSource = dataHandler.GetAllStudents();
+                dataGridView1.DataSource = dataHandler.GetAllStudents();
             }
             catch (Exception ex)
             {
@@ -41,12 +40,17 @@ namespace PRG282_Project
                 DataTable studentsData = dataHandler.GetAllStudents();
 
                 // Bind the data to the DataGridView
-                dataGridView1_CellContentClick.DataSource = studentsData;
+                dataGridView1.DataSource = studentsData;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+        }
+
+        private void ViewAllStudents_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

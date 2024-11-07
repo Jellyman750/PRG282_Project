@@ -81,6 +81,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DeleteForm";
             this.Text = "DeleteForm";
+            this.Load += new System.EventHandler(this.DeleteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

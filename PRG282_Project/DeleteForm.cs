@@ -45,5 +45,10 @@ namespace PRG282_Project
 
             }
         }
+
+        private void DeleteForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
