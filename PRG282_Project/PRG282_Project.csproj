@@ -81,6 +81,12 @@
     <Compile Include="Update.Designer.cs">
       <DependentUpon>Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllStudents.Designer.cs">
+      <DependentUpon>ViewAllStudents.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllStudents.resx">
+      <DependentUpon>ViewAllStudents.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -26,7 +26,7 @@ namespace PRG282_Project
             dataHandler = handler;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string studentID = txtStudentID.Text;
             string name = txtName.Text;        // Name comes first
