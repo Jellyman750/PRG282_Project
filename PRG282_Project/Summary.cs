@@ -15,6 +15,7 @@ namespace PRG282_Project
     {
         DataHandler handler = new DataHandler();
         SummaryRepresentation sr = new SummaryRepresentation();
+        FullSummary fullSummary = new FullSummary();
         public Summary()
         {
             InitializeComponent();
@@ -50,6 +51,19 @@ namespace PRG282_Project
 
             }
             MessageBox.Show("Summary Created");
+
+            fullSummary.ShowDialog();
+
+
+            
+          
+
+
+
+
+
+
+
         }
     }
     }

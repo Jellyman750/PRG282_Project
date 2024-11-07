@@ -14,6 +14,7 @@ namespace PRG282_Project
     {
         Update update = new Update();
         Summary summary = new Summary();
+
         
         public Form1()
         {
@@ -54,10 +55,10 @@ namespace PRG282_Project
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
-            txtStudentID.Clear();
+            /*txtStudentID.Clear();
             txtStudentName.Clear();
             txtStudentAge.Clear();
-            txtCourse.Clear();
+            txtCourse.Clear();*/
         }
 
         private void BtnSummary_Click(object sender, EventArgs e)
@@ -74,8 +75,8 @@ namespace PRG282_Project
 
         private void btnViewStudents_Click(object sender, EventArgs e)
         {
-            
-            ViewAllStudents.Show();
+            ViewAllStudents view = new ViewAllStudents();
+            view.Show();
         }
     }
 }

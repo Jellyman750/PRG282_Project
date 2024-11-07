@@ -41,7 +41,7 @@ namespace PRG282_Project
                // DataTable studentsData = dataHandler.GetAllStudents();
 
                 // Bind the data to the DataGridView
-                dataGridView1.DataSource = studentsData;
+               // dataGridView1.DataSource = studentsData;
                 dataGridView1.DataSource = dataHandler.GetAllStudents();
             }
             catch (Exception ex)
