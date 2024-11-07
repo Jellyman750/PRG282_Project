@@ -13,8 +13,8 @@ namespace PRG282_Project
 {
     public partial class ViewAllStudents : Form
     {
-        DataHandler handler = new DataHandler();
-        private DataHandler dataHandler;
+        DataHandler dataHandler = new DataHandler();
+        //private DataHandler dataHandler;
         public ViewAllStudents()
         {
             InitializeComponent();
@@ -37,10 +37,10 @@ namespace PRG282_Project
             try
             {
                 // Fetch data from the database using DataHandler
-                DataTable studentsData = dataHandler.GetAllStudents();
+               // DataTable studentsData = dataHandler.GetAllStudents();
 
                 // Bind the data to the DataGridView
-                dataGridView1.DataSource = studentsData;
+                dataGridView1.DataSource = dataHandler.GetAllStudents();
             }
             catch (Exception ex)
             {

@@ -43,7 +43,7 @@ namespace PRG282_Project
 
             try
             {
-                handler.AddStudent(student.StudentID.ToString(), student.Name, student.Age.ToString(), student.Course);
+                handler.AddStudent(student.StudentID.ToString(), student.Name, student.Age, student.Course);
                 MessageBox.Show("Student added successfully.");
                 this.Close(); // Close the form after saving
 
