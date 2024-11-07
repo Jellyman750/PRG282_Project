@@ -43,11 +43,11 @@ namespace PRG282_Project
             }
         }
 
-        public void delete(int id)
+        public void delete(int id, string name, int age, string course)
         {
             try
             {
-                string query = $@"DELETE FROM Students WHERE Student_ID = '{id}'";
+                string query = $@"DELETE FROM Students WHERE Student_ID = '{id}' AND Student_Name = '{name}' AND Student_Age = '{age}' AND Course = '{course}'";
                 cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
