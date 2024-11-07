@@ -158,6 +158,7 @@
             this.BtnAddStudent.TabIndex = 3;
             this.BtnAddStudent.Text = "Add Student";
             this.BtnAddStudent.UseVisualStyleBackColor = true;
+            this.BtnAddStudent.Click += new System.EventHandler(this.BtnAddStudent_Click);
             // 
             // btnViewStudents
             // 
@@ -167,6 +168,7 @@
             this.btnViewStudents.TabIndex = 4;
             this.btnViewStudents.Text = "View Student Database";
             this.btnViewStudents.UseVisualStyleBackColor = true;
+            this.btnViewStudents.Click += new System.EventHandler(this.btnViewStudents_Click);
             // 
             // BtnUpdateStudent
             // 
