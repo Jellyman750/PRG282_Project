@@ -111,6 +111,16 @@ namespace PRG282_Project
                 listView1.Items.Add(listViewItem);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

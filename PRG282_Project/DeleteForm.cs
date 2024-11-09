@@ -74,5 +74,10 @@ namespace PRG282_Project
             textBox3.Text = row.Cells[2].Value.ToString();
             textBox4.Text = row.Cells[3].Value.ToString();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
